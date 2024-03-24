@@ -1,0 +1,25 @@
+.shoes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .shoe-card {
+    flex: 1 0 300px; /* Cards will have a minimum width of 300px and will grow to fill the available space */
+  }
+  
+  .btns {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .search-bar {
+    margin-bottom: 20px; /* Add margin below the search bar */
+  }
+  .search-container {
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 10px; /* Add margin bottom to create space */
+}
+.select-category {
+    margin-right: 10px; /* Add margin right to create space between select and input */
+}  

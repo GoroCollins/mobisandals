@@ -1,0 +1,4 @@
+env/
+.env
+notes.txt
+db.sqlite3
