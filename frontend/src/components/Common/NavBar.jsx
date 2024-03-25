@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { LinkContainer } from "react-router-bootstrap";
+import logo from "assets/logo.jpeg"
 
 export default function NavBar() {
   return (
@@ -10,7 +11,7 @@ export default function NavBar() {
     data-bs-theme="dark">
       <Container>
       <LinkContainer className="link-primary" to="/">
-            <Navbar.Brand>Awesome Shop</Navbar.Brand>
+            <Navbar.Brand><img src={logo} alt="Mobi Sandals"/></Navbar.Brand>
           </LinkContainer>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
