@@ -30,7 +30,7 @@ class ShoeSerializerTest(TestCase):
         cls.category = Category.objects.create(code='wmn', description='women')
         cls.shoe = Shoe.objects.create(
             category=cls.category,
-            image='path/to/image.jpg',
+            image='backend/media/uploads/images/D89086_EXTRALARGE-682352451.jpg',
             name='Test Shoe',
             description='This is a test shoe.',
             price=50.00,
@@ -43,7 +43,7 @@ class ShoeSerializerTest(TestCase):
         serializer = ShoeSerializer(instance=self.shoe)
         expected_data = {
             'category_description': 'women',
-            'image': 'path/to/image.jpg',
+            'image': 'backend/media/uploads/images/D89086_EXTRALARGE-682352451.jpg',
             'name': 'Test Shoe',
             'description': 'This is a test shoe.',
             'price': '50.00',

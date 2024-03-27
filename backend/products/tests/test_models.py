@@ -22,7 +22,7 @@ class ShoeTest(TestCase):
     def testShoeModel(self):
         shoe = Shoe.objects.create(
             category=self.category,
-            image='path/to/image.jpg',
+            image='backend/media/uploads/images/D89086_EXTRALARGE-682352451.jpg',
             name='Test Shoe',
             description='This is a test shoe.',
             price=50.00,
