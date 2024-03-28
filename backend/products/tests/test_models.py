@@ -3,15 +3,6 @@ from products.models import Category, Shoe
 from django.contrib.auth import get_user_model
 User = get_user_model()
 
-# class CategoryTest(TestCase):
-    
-#     def testCategoryModel(self):
-#         category = Category.objects.create(code='wmn', description='women')
-#         self.assertEquals(str(category), 'women')
-#         print("IsInstance : ",isinstance(category,Category))
-#         self.assertTrue(isinstance(category,Category))
-
-
 class ShoeTest(TestCase):
     
     @classmethod
