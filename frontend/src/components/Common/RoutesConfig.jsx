@@ -3,6 +3,7 @@ import HomePage from "../HomePage";
 import ShoeDetail from "../Shoes/ShoeDetail";
 import Shoes from "../Shoes/Shoes";
 import AddShoe from "../Shoes/AddShoe";
+import Contact from "../Contact";
 
 export default function RoutesConfig() {
     return (
@@ -12,6 +13,7 @@ export default function RoutesConfig() {
             <Route path="/shoes" element={<Shoes />} />
             <Route path="/shoe/:id" element={<ShoeDetail />} />
             <Route path="/add-shoe" element={<AddShoe />} />
+            <Route path="/message" element={<Contact />} />
         </Routes>
     )
 }
