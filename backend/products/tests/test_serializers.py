@@ -1,11 +1,11 @@
-from django.test import TestCase
+from rest_framework.test import APITestCase
 from django.contrib.auth import get_user_model
 from products.models import Category, Shoe
 from products.serializers import CategorySerializer, ShoeSerializer
 
 User = get_user_model()
 
-class CategorySerializerTest(TestCase):
+class CategorySerializerTest(APITestCase):
     
     @classmethod
     def setUpTestData(cls):
@@ -22,7 +22,7 @@ class CategorySerializerTest(TestCase):
         }
         self.assertEquals(serializer.data, expected_data)
 
-class ShoeSerializerTest(TestCase):
+class ShoeSerializerTest(APITestCase):
     
     @classmethod
     def setUpTestData(cls):
@@ -30,7 +30,7 @@ class ShoeSerializerTest(TestCase):
         cls.category = Category.objects.create(code='wmn', description='women')
         cls.shoe = Shoe.objects.create(
             category=cls.category,
-            image='backend/media/uploads/images/D89086_EXTRALARGE-682352451.jpg',
+            image='/uploads/images/D89086_EXTRALARGE-682352451.jpg',
             name='Test Shoe',
             description='This is a test shoe.',
             price=50.00,
@@ -43,14 +43,15 @@ class ShoeSerializerTest(TestCase):
         serializer = ShoeSerializer(instance=self.shoe)
         expected_data = {
             'category_description': 'women',
-            'image': 'backend/media/uploads/images/D89086_EXTRALARGE-682352451.jpg',
+            'image': '/backend/media/uploads/images/D89086_EXTRALARGE-682352451.jpg',
             'name': 'Test Shoe',
             'description': 'This is a test shoe.',
             'price': '50.00',
             'id': self.shoe.id,
             'quantity': 10,
-            'category': self.category.id,
+            'category': 'wmn',
             'created_by': 'test_user',
             'modified_by': 'test_user'
         }
         self.assertEquals(serializer.data, expected_data)
+# self.category.code,
