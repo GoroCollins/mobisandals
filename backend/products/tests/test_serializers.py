@@ -54,4 +54,3 @@ class ShoeSerializerTest(APITestCase):
             'modified_by': 'test_user'
         }
         self.assertEquals(serializer.data, expected_data)
-# self.category.code,
