@@ -1,15 +1,19 @@
-from django.test import TestCase
+import pytest
+from django.urls import reverse
+from django.test import Client
 
-class UrlTest(TestCase):
+@pytest.mark.django_db
+def test_categories_page():
+    client = Client()
+    response = client.get(reverse('category-list'))
+    print(response)
 
-    def testCategoriesPage(self):
-        response = self.client.get('/productscategories/')
-        print(response)
+    assert response.status_code == 200
 
-        self.assertEqual(response.status_code, 200)
-        
-    def testShoesPage(self):
-        response = self.client.get('/productsshoes/')
-        print(response)
+@pytest.mark.django_db
+def test_shoes_page():
+    client = Client()
+    response = client.get(reverse('shoe-list'))
+    print(response)
 
-        self.assertEqual(response.status_code, 200)
+    assert response.status_code == 200
