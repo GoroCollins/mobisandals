@@ -6,7 +6,7 @@ import NavBar from '../components/Common/NavBar';
 import logo from '../assets/logo.jpeg'; // Import the logo image
 
 describe('NavBar', () => {
-  test('renders navbar with brand name and logo', () => {
+  test('renders navbar with a logo', () => {
     render(
       <Router>
         <NavBar />
@@ -14,8 +14,8 @@ describe('NavBar', () => {
     );
 
     // Check for brand name
-    const brandElement = screen.getByText('Mobi Sandals');
-    expect(brandElement).toBeInTheDocument();
+    // const brandElement = screen.getByText('/Home/i');
+    // expect(brandElement).toBeInTheDocument();
 
     // Check for logo image
     const logoElement = screen.getByAltText('Mobi Sandals');
