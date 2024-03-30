@@ -10,7 +10,7 @@ import {
 export default function Footer() {
   return (
     <>
-     <div class="social-container">
+     <div className="social-container">
       <h3>Follow Us</h3>
       {/* <a href="https://www.youtube.com/c/jamesqquick"
         className="youtube social">
