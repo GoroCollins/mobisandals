@@ -12,7 +12,7 @@ describe('RoutesConfig', () => {
         <RoutesConfig />
       </MemoryRouter>
     );
-    const homepagetext = screen.getByRole('heading', { name: /Welcome to the awesome shoe/i });
+    const homepagetext = screen.getByRole('heading', { name: /Welcome to Mobi Sandals/i });
     expect(homepagetext).toBeInTheDocument();
   });
 
