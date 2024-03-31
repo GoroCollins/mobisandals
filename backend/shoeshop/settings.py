@@ -1,26 +1,27 @@
 from pathlib import Path
 import os
 import environ # django-environ infers the data types 
-env = environ.Env()
-environ.Env.read_env() # load configs from .env file; since I have the .env file in the same directory
-environ.Env.read_env() # load configs from .env file; since I have the .env file in the same directory
+# env = environ.Env()
+# environ.Env.read_env() # load configs from .env file; since I have the .env file in the same directory
+# environ.Env.read_env() # load configs from .env file; since I have the .env file in the same directory
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 # env_file = Path(__file__).resolve().parent.parent / '.env'
 # environ.Env.read_env(env_file)
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = "django-insecure-u9toxh+k4zbd_ulxby6qa86b*&8v==im0v^+k-e&skslzc)(5v"
+SECRET_KEY = "django-insecure-u9toxh+k4zbd_ulxby6qa86b*&8v==im0v^+k-e&skslzc)(5v"
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+# SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+#DEBUG = env('DEBUG')
+DEBUG = True
 
 # Ensure that environment variables are available before accessing settings
-assert SECRET_KEY, 'Secret key not found in environment variables.'
-assert DEBUG is not None, 'DEBUG flag not found in environment variables.'
+# assert SECRET_KEY, 'Secret key not found in environment variables.'
+# assert DEBUG is not None, 'DEBUG flag not found in environment variables.'
 
 ALLOWED_HOSTS = []
 CORS_ALLOWED_ORIGINS = [
