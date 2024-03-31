@@ -27,5 +27,5 @@ jobs:
         pip install -r backend/requirements.txt
     - name: Run Tests
       run: |
-        python my_script.py
+        python backend/shoeshop/my_script.py
         pytest
