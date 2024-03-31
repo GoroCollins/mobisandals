@@ -74,3 +74,4 @@ function Shoes({ count, setCount }) {
 }
 
 export default Shoes;
+
